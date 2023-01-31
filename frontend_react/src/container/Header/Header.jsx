@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.scss';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
+import { AppWrap } from '../../Wrapper';
 
 const Header = () => {
     const scaleVarients = {
@@ -15,7 +16,7 @@ const Header = () => {
         }
     }
     return (
-        <div id="home" className='app__header app__flex'>
+        <div className='app__header app__flex'>
             <motion.div
                 whileInView={{ x: [-100, 0], opacity: [0, 1] }}
                 transition={{ duration: 1 }}
@@ -26,12 +27,12 @@ const Header = () => {
                         <span>👋</span>
                         <div style={{ marginLeft: 20 }}>
                             <p className='p-text'> Salut, I am</p>
-                            <h1 className='head-text'>Katy Nguyen</h1>
+                            <h1 className='head-text'>Katy Ng</h1>
                         </div>
                     </div>
                     <div className='tag-cmp app__flex'>
                         <p className='p-text'> Web developer </p>
-                        <p className='p-text'> Lifetime leaner </p>
+                        <p className='p-text'> Lifetime learner </p>
                     </div>
 
                 </div>
@@ -59,7 +60,7 @@ const Header = () => {
                 whileInView={scaleVarients.whileInView}
                 className="app__header-circle"
             >
-                {[images.react, images.sass, images.python].map((circle, index) => {
+                {[images.sass, images.react, images.python, images.webpack, images.node, images.typescript].map((circle, index) => {
                     return (
                         <div className='circle-cmp app__flex' key={`circle=${index}`}>
                             <img src={circle} alt="circle" />
@@ -71,4 +72,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default AppWrap(Header, 'home',)
