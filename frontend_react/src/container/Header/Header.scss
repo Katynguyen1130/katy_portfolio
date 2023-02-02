@@ -2,9 +2,10 @@
     position: relative;
     background: url("../../assets/bgIMG.png");
     background-size: cover;
-    background-repeat: repeat;
     background-position: center;
+    background-repeat: repeat;
 
+    // disable the default padding styles
     .app__wrapper {
         padding: 0;
 
@@ -17,20 +18,20 @@
 .app__header {
     flex: 1;
     width: 100%;
-    height: 50%;
+    height: 100%;
     flex-direction: row;
 
-    padding: 6rem 2rem 0;
+    padding: 6rem 2rem 0rem;
 
-    @media screen and (min-width:2000px) {
+    @media screen and (min-width: 2000px) {
         padding-top: 8rem;
     }
 
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width: 1200px) {
         flex-direction: column;
     }
 
-    @media screen and (max-width:400px) {
+    @media screen and (max-width: 450px) {
         padding: 6rem 1rem 2rem;
     }
 }
@@ -43,10 +44,11 @@
     align-items: flex-start;
     height: 100%;
 
-    @media screen and (max-width :2000px) {
+    margin: 0 2rem;
+
+    @media screen and (max-width: 1200px) {
         width: 100%;
         margin-right: 0rem;
-
     }
 }
 
@@ -56,26 +58,6 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-
-    .badge-cmp,
-    .tag-cmp {
-        padding: 1rem 2rem;
-        background: var(--white-color);
-        border-radius: 15px;
-        flex-direction: row;
-        width: auto;
-
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    }
-}
-
-.app__header-badge {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
-
 
     .badge-cmp,
     .tag-cmp {
@@ -116,14 +98,11 @@
 .app__header-circle {
     flex: 0.75;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
-    height: 50%;
+    height: 100%;
     margin-left: 1rem;
-    position: relative;
-    bottom: -10%;
 
     div {
         width: 100px;
@@ -133,26 +112,44 @@
         background: var(--white-color);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
-        margin: 1.75rem;
-        width: 150px;
-        height: 150px;
-
         img {
             width: 60%;
             height: 60%;
         }
     }
 
+    // circles with different height & width
 
+    div:nth-child(1) {
+        width: 120px;
+        height: 120px;
+    }
 
+    div:nth-child(2) {
+        margin: 5rem;
+        width: 200px;
+        height: 200px;
+    }
 
+    div:nth-child(3) {
+        width: 90px;
+        height: 90px;
+    }
 
-    @media screen and (min-width: 1680px) {
-        height: 60%;
-        position: relative;
-        bottom: -10%;
+    @media screen and (min-width: 2000px) {
+        div:nth-child(2) {
 
-        div {
+            width: 400px;
+            height: 400px;
+        }
+
+        div:nth-child(3) {
+
+            width: 170px;
+            height: 170px;
+        }
+
+        div:nth-child(1) {
             width: 200px;
             height: 200px;
         }
@@ -161,8 +158,8 @@
     @media screen and (max-width: 1200px) {
         width: 100%;
         flex-direction: row;
+        flex-wrap: wrap;
         margin-left: 0;
-        height: 100%;
 
         div {
             margin: 1rem;
@@ -178,7 +175,6 @@
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
-    margin: 20px;
 
     img {
         width: 100%;

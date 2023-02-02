@@ -15,7 +15,8 @@ const About = () => {
     }, []);
     return (
         <>
-            <h2 className="head-text">I know that <span> Good app </span> means <span> Good business</span></h2>
+            <h2 className="head-text">To me, coding is <span> Solving problem. </span> </h2>
+            <h2 className="head-text">and learning is  <span> a hobby </span> </h2>
 
             <div className='app__profiles'>
                 {abouts.map((about, index) => (
