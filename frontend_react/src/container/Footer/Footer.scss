@@ -87,12 +87,12 @@
         textarea {
             width: 100%;
             padding: 0.95rem;
-            border: none;
+            border: 1px solid var(--secondary-color);
             border-radius: 7px;
-            background-color: var(--primary-color);
+            background-color: transparent;
 
             font-family: var(--font-base);
-            color: var(--secondary-color);
+            color: var(--black-color);
             outline: none;
         }
 
@@ -109,7 +109,7 @@
         padding: 1rem 2rem;
         border-radius: 10px;
         border: none;
-        background-color: var(--secondary-color);
+        background-color: var(--burnOrange-color);
         margin-bottom: 50px;
 
         font-weight: 500;
@@ -122,7 +122,7 @@
         cursor: pointer;
 
         &:hover {
-            background-color: #2430af;
+            background-color: var(--secondary-color);
         }
     }
 

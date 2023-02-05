@@ -7,13 +7,21 @@ const SocialMedia = () => {
     return (
         <div className='app__social'>
             <div>
-                <BsGithub />
+                <a href="https://github.com/Katynguyen1130" target="_blank">
+                    <BsGithub />
+                </a>
             </div>
             <div>
-                <BsLinkedin />
+                <a href="https://www.linkedin.com/in/katy-nguyen-431594121/" target="_blank">
+                    <BsLinkedin />
+                </a>
+
             </div>
             <div>
-                <FaFacebookF />
+                <a href="https://www.facebook.com/nguyen.nhumai.7/" target="_blank">
+                    <FaFacebookF />
+                </a>
+
             </div>
         </div>
     )
